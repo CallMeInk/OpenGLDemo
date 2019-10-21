@@ -2,6 +2,6 @@ package com.example.opengldemo;
 
 public class GitTest {
 
-    String testString = "master1";
+    String testString = "master2";
 
 }
