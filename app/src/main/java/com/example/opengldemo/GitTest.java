@@ -2,6 +2,6 @@ package com.example.opengldemo;
 
 public class GitTest {
 
-    String testString = "feature3";
+    String testString = "rebase feature3 master5";
 
 }
