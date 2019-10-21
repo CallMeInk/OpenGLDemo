@@ -2,6 +2,6 @@ package com.example.opengldemo;
 
 public class GitTest {
 
-    String testString = "feature1";
+    String testString = "use merge feature1-master3";
 
 }
