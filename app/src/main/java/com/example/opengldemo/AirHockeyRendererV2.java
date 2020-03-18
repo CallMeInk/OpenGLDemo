@@ -91,17 +91,17 @@ public class AirHockeyRendererV2 implements GLSurfaceView.Renderer {
         //draw the mallets
         positionObjectInScene(0f, mallet.height / 2f, -0.4f);
         colorShaderProgram.useProgram();
-        colorShaderProgram.setUniforms(modelViewProjectionMatrix, 1f, 0f, 0f);
+        colorShaderProgram.setUniforms(modelViewProjectionMatrix);
         mallet.bindData(colorShaderProgram);
         mallet.draw();
 
         positionObjectInScene(0f, mallet.height / 2f, 0.4f);
-        colorShaderProgram.setUniforms(modelViewProjectionMatrix, 0f, 0f, 1f);
+        colorShaderProgram.setUniforms(modelViewProjectionMatrix);
         mallet.draw();
 
         //draw the puck.
         positionObjectInScene(0f, puck.height / 2f, 0f);
-        colorShaderProgram.setUniforms(modelViewProjectionMatrix, 0.8f, 0.8f, 1f);
+        colorShaderProgram.setUniforms(modelViewProjectionMatrix);
         puck.bindData(colorShaderProgram);
         puck.draw();
     }

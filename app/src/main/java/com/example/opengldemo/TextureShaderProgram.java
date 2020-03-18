@@ -11,10 +11,10 @@ public class TextureShaderProgram extends ShaderProgram{
 
     //Attribute locations
     private final int aPositionLocation;
-    private final int aTextureCoordiantesLocation;
+    private final int aTextureCoordinatesLocation;
 
     public TextureShaderProgram(Context context){
-        super(context, R.raw.texture_vertex_shader, R.raw.texture_fragment_shader);
+        super(context, R.raw.simple_vertex_shader_cp7, R.raw.simple_fragment_shader_cp7);
 
         //Retrive uniform locations for the sjader program
         uMatrixLocation = GLES20.glGetUniformLocation(program, U_MATRIX);
@@ -22,11 +22,12 @@ public class TextureShaderProgram extends ShaderProgram{
 
         //Retrive attribute locations for the shader program
         aPositionLocation = GLES20.glGetAttribLocation(program, A_POSITION);
-        aTextureCoordiantesLocation = GLES20.glGetAttribLocation(program, A_TEXTURE_COORDINATES);
+        aTextureCoordinatesLocation = GLES20.glGetAttribLocation(program, A_TEXTURE_COORDINATES);
     }
 
     public void setUniforms(float[] matrix, int textureId){
         // pass the matrix into the shader program
+        //传递矩阵给他的uniform
         GLES20.glUniformMatrix4fv(uMatrixLocation, 1, false, matrix, 0);
 
         //set the active texture unit to texture unit 0
@@ -44,7 +45,7 @@ public class TextureShaderProgram extends ShaderProgram{
     }
 
     public int getTextureCoordinatesAttributeLocation(){
-        return aTextureCoordiantesLocation;
+        return aTextureCoordinatesLocation;
     }
 
 }

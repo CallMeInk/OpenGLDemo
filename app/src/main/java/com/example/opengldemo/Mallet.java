@@ -22,23 +22,23 @@ public class Mallet {
     }
 
     public void bindData(ColorShaderProgram colorShaderProgram){
-//        vertexArray.setVertexAttribPointer(
-//                0,
-//                colorShaderProgram.getPositionAttributeLocation(),
-//                POSITION_COMPONENT_COUNT,
-//                STRIDE
-//        );
-//
-//        vertexArray.setVertexAttribPointer(
-//                POSITION_COMPONENT_COUNT,
-//                colorShaderProgram.getColorAttributeLocation(),
-//                COLOR_COMPONENT_COUNT,
-//                STRIDE
-//        );
+        vertexArray.setVertexAttribPointer(
+                0,
+                colorShaderProgram.getPositionAttributeLocation(),
+                POSITION_COMPONENT_COUNT,
+                STRIDE
+        );
+
+        vertexArray.setVertexAttribPointer(
+                POSITION_COMPONENT_COUNT,
+                colorShaderProgram.getColorAttributeLocation(),
+                COLOR_COMPONENT_COUNT,
+                STRIDE
+        );
     }
 
     public void draw(){
-        GLES20.glDrawArrays(GLES20.GL_TRIANGLE_FAN, 0, 2);
+        GLES20.glDrawArrays(GLES20.GL_POINTS, 0, 2);
     }
 
 }
