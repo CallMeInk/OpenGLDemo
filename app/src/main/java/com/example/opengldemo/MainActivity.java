@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
             glSurfaceView.setEGLContextClientVersion(2);
 
             // assign our renderer
-            glSurfaceView.setRenderer(new AirHockeyRendererCp07(this));
+            glSurfaceView.setRenderer(new AirHockeyRendererCp08(this));
             rendererSet = true;
         }else{
             Toast.makeText(this, "not support", Toast.LENGTH_LONG).show();

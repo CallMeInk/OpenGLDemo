@@ -3,7 +3,7 @@ package com.example.opengldemo;
 import android.content.Context;
 import android.opengl.GLES20;
 
-public class TextureShaderProgram extends ShaderProgram{
+public class TextureShaderProgramCP08 extends ShaderProgram{
 
     //Uniform locations
     private final int uMatrixLocation;
@@ -13,8 +13,8 @@ public class TextureShaderProgram extends ShaderProgram{
     private final int aPositionLocation;
     private final int aTextureCoordinatesLocation;
 
-    public TextureShaderProgram(Context context){
-        super(context, R.raw.simple_vertex_shader_cp7, R.raw.simple_fragment_shader_cp7);
+    public TextureShaderProgramCP08(Context context){
+        super(context, R.raw.simple_vertex_shader_cp8, R.raw.simple_fragment_shader_cp8);
 
         //Retrive uniform locations for the shader program
         uMatrixLocation = GLES20.glGetUniformLocation(program, U_MATRIX);
